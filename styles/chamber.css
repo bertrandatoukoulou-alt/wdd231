@@ -7,19 +7,27 @@ header {
     width: auto;
 }
 
-nav a:hover {
+nav {
     display: flex;
     justify-content: space-around;
+    background-color: #f0f1c9;
+}
+
+nav a {
     font-size: 1.2rem;
     color: #024216;
-    background-color: #f0f1c9;
+}
+
+nav a:hover {
+    background-color: #753701;
+    color: #f0f1c9;
 }
 
 
 body {
     font-optical-sizing: auto;
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f0;
+    background-color: #f6f6da;
     margin: 10px;
 }
 
@@ -30,6 +38,7 @@ main {
 }
 
 main h1 {
+    grid-column: 1 / 3;
     text-align: center;
     font-size: 2rem;
     color: #753701;
@@ -61,8 +70,14 @@ section h2 {
 }
 
 @media (max-width: 768px) {
-    menu {
+    main {
         grid-template-columns: 1fr;
+    }
+
+    .about,
+    .photo,
+    .courses {
+        grid-column: 1;
     }
 }
 
