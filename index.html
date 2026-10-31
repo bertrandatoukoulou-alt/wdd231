@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="styles/chamber.css">
     <link rel="stylesheet" href="styles/assignment.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <script src="scripts/chamber.js" defer></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,12 +31,15 @@
 <body>
 
     <header>
-        <p class="site-title">WDD-231 BYU IDAHO</p>
+        <div class="logo">
+            <img src="images/byu-idaho.svg" alt="BYU Idaho Logo" width="100">
+            <p>WDD-231</p>
+        </div>
 
-        <button id="menu" aria-label="Menu">&#9776;</button>
+        <button id="menu">☰</button>
 
         <nav class="navigation">
-            <a href="index.html">Home</a>
+            <a href="index.html" class="active">Home</a>
             <a href="assignments.html">Assignments</a>
             <a href="chamber-project.html">Chamber Project</a>
             <a href="final-project.html">Final Project</a>
@@ -60,15 +65,26 @@
 
         <section class="courses">
             <h2>Web Certificate Courses</h2>
-            <ul>
-                <li>WDD 130</li>
-                <li>WDD 131</li>
-                <li>WDD 231</li>
-            </ul>
+        
+            <div class="filter-buttons">
+                <button id="all">All</button>
+                <button id="cse">CSE</button>
+                <button id="wdd">WDD</button>
+            </div>
+        
+            <div id="course-container"></div>
+        
+            <p id="credits"></p>
         </section>
     </main>
 
     <footer>
+        <div class="social">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+        </div>
+
         <p>&copy; <span id="currentyear">2026</span> | Koffi Atoukoulou | Lomé, Togo</p>
         <span id="lastmodified"></span>
     </footer>
