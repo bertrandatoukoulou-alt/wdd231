@@ -1,6 +1,6 @@
 header {
-    background: #f0f1c9;
-    color: #753701;
+    background: #753701;
+    color: #f0f1c9;
     padding: 10px;
     margin: auto;
     text-align: center;
@@ -8,9 +8,11 @@ header {
 }
 
 nav a:hover {
-    color: #024718;
-    padding: 10px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.2rem;
+    color: #024216;
+    background-color: #f0f1c9;
 }
 
 
@@ -21,14 +23,16 @@ body {
     margin: 10px;
 }
 
-h1 {
-    text-align: center;
-}
-
 main {
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 1rem;
+}
+
+main h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #753701;
 }
 
 .about {
